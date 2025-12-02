@@ -1,0 +1,71 @@
+#!/bin/bash
+#
+#AUTOR: GUSTAVO ALEJANDRO CASTRO TORO   DATE:2-Dic-2025
+#
+#%%%%%   THIS PROGRAM MASSIVE CALCULATED
+#%%%%%   Average Kyte-Doolittle hydrophobicity
+#%%%%%   of 19–21 residue segments
+#
+#arg1=input_file
+#arg2=kd_cut_off
+#
+#
+#input_file, delim=" ", single space
+#   $1      $2
+# seq_id prot_seq
+#
+#STAR_PROG
+#
+gawk -v cut_off="$2" '
+BEGIN {
+h["A"]=1.8
+h["R"]=-4.5
+h["N"]=-3.5
+h["D"]=-3.5
+h["C"]=2.5
+h["Q"]=-3.5
+h["E"]=-3.5
+h["G"]=-0.4
+h["H"]=-3.2
+h["I"]=4.5
+h["L"]=3.8
+h["K"]=-3.9
+h["M"]=1.9
+h["F"]=2.8
+h["P"]=-1.6
+h["S"]=-0.8
+h["T"]=-0.7
+h["W"]=-0.9
+h["Y"]=-1.3
+h["V"]=4.2
+}
+{
+$2=toupper($2)
+for(i=1;i<=length($2)-19+1;i++)
+   {
+   best_kd=-999;best_l=0
+   best_seq=""
+   for(l=19;l<=21;l++)
+      {
+      if(i+l-1>length($2))continue
+      sum=0;val=1
+      for(j=i;j<i+l;j++)
+      {
+      aa=substr($2,j,1)
+      if(!(aa in h)){val=0;break}
+      sum+=h[aa]}
+      if(!val)continue
+      avg=sum/l
+      if(avg>best_kd)
+        {
+        best_kd=avg
+        best_l=l
+        best_seq=substr($2,i,l)
+        }
+      }
+     if(best_kd>=cut_off)printf "%s;%0.3f;%s;%d;%d;%d\n",$1,best_kd,best_seq,i,i+best_l-1,best_l
+    }
+}' $1
+#
+#END_PROG
+#
