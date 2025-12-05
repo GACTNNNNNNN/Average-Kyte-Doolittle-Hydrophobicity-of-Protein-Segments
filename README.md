@@ -169,8 +169,9 @@ Consumo esperado:
 (*Todos estos cálculos fueron generados automáticamente por ChatGPT a
 solicitud del usuario y dependen de implementación y compilación.*)
 
-Para 717.615 de tamaño variable:
+Para 717.615 secuencia de proteinas de tamaño variable:
 
+Tiempo a 8 hilos de CPU:
 real	0m4.460s
 user	0m34.574s
 sys	0m0.589s
