@@ -29,6 +29,7 @@ Example:
 #
 #
 Input: single space demil file
+
     Example:
       seq_id protein_seq
 #
