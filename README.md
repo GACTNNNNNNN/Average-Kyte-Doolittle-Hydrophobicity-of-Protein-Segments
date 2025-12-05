@@ -23,8 +23,10 @@ multi-thread high-performance processing model described earlier.
 Available parameters:
 
 ./kd_fast_openmp [input] [cutoff] [win_min=19] [win_max=21] [threads]
+
 Example:
-./kd_fast_openmp all_idx 1.6 19 21 8
+
+./kd_fast_openmp input 1.6 19 21 8
 
 #
 #
