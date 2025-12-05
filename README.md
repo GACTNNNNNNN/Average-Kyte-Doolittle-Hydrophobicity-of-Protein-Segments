@@ -26,7 +26,11 @@ Available parameters:
 Example:
 ./kd_fast_openmp all_idx 1.6 19 21 8
 
-
+Input: single space demil file
+    Example:
+      seq_id protein_seq
+      
+Options:
     [cutoff]
     [win_min=19]
     [win_max=21]
