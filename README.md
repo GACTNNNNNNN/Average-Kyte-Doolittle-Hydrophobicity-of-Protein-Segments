@@ -10,10 +10,12 @@ The program supports several optional parameters to customize the
 hydrophobicity profile calculation (Kyte–Doolittle or any
 sliding-window–based method). 
 
-Time for 750.000 protein seq (i7:8-threads)
+Time for 717.615 protein seq (i7:8-threads)
 
 real	0m4.460s
+
 user	0m34.574s
+
 sys	0m0.589s
 
 multi-thread high-performance processing model described earlier.
