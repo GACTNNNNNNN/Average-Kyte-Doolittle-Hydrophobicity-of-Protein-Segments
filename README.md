@@ -32,6 +32,7 @@ Input: single space demil file
 
     Example:
       seq_id protein_seq
+      seq_01 MAVLVLGLAALAT...
 #
 
 Options:
