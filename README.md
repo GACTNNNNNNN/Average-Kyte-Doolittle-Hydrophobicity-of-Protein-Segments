@@ -8,7 +8,10 @@ PROGRAM PARAMETER DESCRIPTION
 
 The program supports several optional parameters to customize the
 hydrophobicity profile calculation (Kyte–Doolittle or any
-sliding-window–based method). All parameters integrate into the
+sliding-window–based method). All parameters integrate into thereal	0m4.460s
+user	0m34.574s
+sys	0m0.589s
+
 multi-thread high-performance processing model described earlier.
 
 Available parameters:
@@ -165,6 +168,12 @@ Consumo esperado:
 
 (*Todos estos cálculos fueron generados automáticamente por ChatGPT a
 solicitud del usuario y dependen de implementación y compilación.*)
+
+Para 717.615 de tamaño variable:
+
+real	0m4.460s
+user	0m34.574s
+sys	0m0.589s
 
 ---------------------------------------------------------------------
 3. FUNCIONAMIENTO DE LA VENTANA DESLIZANTE (SLIDING WINDOW)
